@@ -1,56 +1,47 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Ramen Rater</title>
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-  <script defer type="module" src="./src/index.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Blog</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header>
-    <h3>Ramen Rater</h3>
+  <header class="main-header">
+    <h1 id="first-head">QUALITY MOTORS BY D3NZEL!</h1>    
+    <h3 id="second-head">Innovation meets efficiency</h3>
   </header>
+  <div class="body-container">
+    <div class="left-container">
+      <h3 id="third-head">BLOG POSTS</h3>
+      <div id="post-list"></div>
 
-  
-  <div id="ramen-menu">
-  
+      <form id="new-post-form">
+        <h3>Add New Post</h3>
+        <input type="text" name="title" placeholder="Post title" required /><br><br>
+        <textarea name="content" placeholder="Post content" required></textarea><br>
+        <input type="text" name="author" placeholder="Author name" required /><br>
+        <button type="submit">Add Post</button>
+      </form><br>
+
+      <form id="edit-post-form" class="hidden">
+        <h4>Update Post Details</h4>
+        <label for="edit-title">Title:</label>
+        <input type="text" name="title" id="edit-title" /><br><br>
+        <label for="edit-content">Content:</label><br>
+        <textarea name="content" id="edit-content" rows="4"></textarea><br>
+        <button type="submit">Update Post</button><br><br>
+        <button type="button" id="cancel-edit">Cancel</button>
+      </form>
+
+      <button class="btn classy-btn">Edit</button>
+      <button class="btn classy-btn">Delete</button>
+    </div>
+    <div id="post-detail"></div>
   </div>
-
-
-  <div id="ramen-detail">
-    <img class="detail-image" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
-    <h2 class="name">Insert Name Here</h2>
-    <h3 class="restaurant">Insert Restaurant Here</h3>
-  </div>
-
-  <h3>Rating:</h3>
-  <p>
-    <span id='rating-display'>Insert rating here</span> / 10
-  </p>
-  <h3>Comment:</h3>
-  <p id='comment-display'>
-    Insert comment here
-  </p>
-
-
-  <form id="new-ramen">
-    <h4>Add New Ramen</h4>
-    <label for="new-name">Name: </label>
-    <input type="text" name="name" id="new-name" />
-    <label for="new-restaurant">Restaurant: </label>
-    <input type="text" name="restaurant" id="new-restaurant" />
-    <label for="new-image">Image: </label>
-    <input type="text" name="image" id="new-image" />
-    <label for="new-rating">Rating: </label>
-    <input type="number" name="rating" id="new-rating" />
-    <label for="new-comment">Comment: </label>
-    <textarea name="new-comment" name="new-comment" id="new-comment"></textarea>
-    <input type="submit" id='submit-button' value="Create" />
-  </form>
-
+  <footer class="main-footer">
+    <p>&copy; 2025 Quality Motors by D3nzel. All rights reserved.</p>
+  </footer>
+  <script src="index.js" defer></script> 
 </body>
-
 </html>
-
